@@ -53,6 +53,14 @@ frontend/src/api, stores, types, constants, constructors, components/common, hoo
 - DiffType: constants/DiffType、types/DiffType、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - PrivacyRiskLevel: constants/PrivacyRiskLevel、types/PrivacyRiskLevel、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
 - ReviewStatus: constants/ReviewStatus、types/ReviewStatus、constructors、logTemplates、errorMessages、筛选器、展示组件/控制器均有引用。
+- MergeStatus: constants/MergeStatus、types/DiffMerge、constructors/DiffMergeConstructor、api/DiffMerge、stores/DiffMergeStore、hooks/useDiffMerge、statusText、formatters、MergePanel/ComparePage 展示均有引用。
+
+## 人工归并规则
+
+- 版本对比页可勾选 ≥2 条自动差异存为归并草稿；草稿未确认前不影响任何统计。
+- 确认归并后生成一条 `origin=MERGED` 的新差异：风险取原项最高值，原项处理记录归集到新项，原项移入并档只读可查、不可再编辑。
+- 归并项可"拆回"：原项恢复为有效差异并取回处理记录，归并项本身入并档，归并记录标记为已拆回。
+- 详情列表与待办数量均按确认后的归并结果显示。
 
 ## 为什么会牵一发动全身
 
