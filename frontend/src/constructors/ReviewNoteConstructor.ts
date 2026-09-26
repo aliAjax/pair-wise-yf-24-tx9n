@@ -7,6 +7,8 @@ export const createDefaultReviewNote = (overrides: Partial<ReviewNote> = {}): Re
   comment: "comment 1" as never,
   reviewer: "reviewer 1" as never,
   status: "CONFIRMED" as never,
+  moved_to_merge_id: null,
+  created_at: undefined,
   ...overrides
 });
 
